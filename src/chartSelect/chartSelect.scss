@@ -1,0 +1,41 @@
+.chart-select{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+
+	.select{
+		box-shadow: 1px 1px 23px rgba(0,0,0,0.1);
+		margin: 2em;
+		padding: 2em;
+
+		.nav-select{
+			
+			ul {
+				display: flex;
+				list-style: none;
+
+				button{
+					border: none;
+					background-color: transparent;
+					text-decoration: none;
+					color: #636363;
+					padding: 8px;
+					cursor: pointer;
+
+					&:focus{
+						outline: thin dotted;
+						outline: 0px auto -webkit-focus-ring-color;
+						outline-offset: 0px;
+					}
+
+					&.active{
+						font-weight: 700;
+						color: #000;
+						border-bottom: 3px solid #2196f3;
+					}
+				}
+			}
+		}
+	}
+}
