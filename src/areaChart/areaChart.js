@@ -5,7 +5,7 @@ import {
 
 export default class AreaChart extends Component {
   render() {
-		let data = this.props.data
+		let {data} = this.props
     return (
       <LineChart
 				width={600}

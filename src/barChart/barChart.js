@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 
 export default class barChart extends Component {
-	render() {
-		let data = this.props.data
-		let COLORS = this.props.colors
-		return (
+  render() {
+    let { data, colors } = this.props
+    return (
       <BarChart className='bar-chart'
         width={600}
         height={350}
-        data={this.props.data}
+        data={data}
 
       >
         <CartesianGrid strokeDasharray="3 3" />
@@ -17,11 +16,11 @@ export default class barChart extends Component {
         <YAxis />
         <Tooltip />
         <Bar dataKey="value" fill="#2196f3">
-				{
-					data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
-				}
-				</Bar>
+          {
+            data.map((entry, index) => <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />)
+          }
+        </Bar>
       </BarChart>
     );
-	}
+  }
 }

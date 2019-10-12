@@ -23,14 +23,14 @@ export default class ChartSelect extends Component {
 	}
 
 	returnChart(){
-		let data = this.state.dataChart
+		let {dataChart} = this.state
 		switch (this.state.chart) {
 			case 'Bar':
-				return (<BarChart data={data} colors={COLORS}/>)
+				return (<BarChart data={dataChart} colors={COLORS}/>)
 			case 'Pie':
-				return (<PieChart data={data} colors={COLORS}/>)
+				return (<PieChart data={dataChart} colors={COLORS}/>)
 			case 'Line':
-				return (<AreaChart data={data}/>)
+				return (<AreaChart data={dataChart}/>)
 			default:
 				return (<div>Problemas a carregar gráfico</div>)
 		}
@@ -38,7 +38,7 @@ export default class ChartSelect extends Component {
 	}
 
 	render() {
-		let chart = this.state.chart
+		let {chart} = this.state
 		return (
 			<div className='chart-select'>
 				<div className='select'>
