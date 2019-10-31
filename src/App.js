@@ -21,20 +21,20 @@ const data = [
     name: 'Page F', value: 2390,
   },
   {
-		name: 'Page G', value: 3490,
-	},
-	{
-		name: 'Page H', value: 1000
-	}
+    name: 'Page G', value: 3490,
+  },
+  {
+    name: 'Page H', value: 1000
+  }
 ];
 
 export default class App extends Component {
 
-	render() {
-		return (
-			<div>
-				<CharSelect data={data}/>
-    	</div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <CharSelect data={data}/>
+      </div>
+    )
+  }
 }
